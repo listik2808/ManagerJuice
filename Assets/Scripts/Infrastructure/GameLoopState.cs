@@ -1,6 +1,4 @@
-﻿using Unity.VisualScripting;
-
-namespace Scripts.Infrastructure
+﻿namespace Scripts.Infrastructure
 {
     public class GameLoopState : IState
     {

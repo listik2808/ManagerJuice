@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using Scripts.Hero;
+using UnityEngine;
 
 namespace Scripts.Infrastructure
 {
     public class LoadLevelState : IPayLoadedState<string>
     {
-        private const string Path = "Player/Capsule";
+        private const string Path = "Player/Hero";
         private const string Hud = "Infrastructure/Hud";
         private const string InitialPoint = "InitialPoint";
         private readonly GameStateMachine _stateMachine;
@@ -30,6 +31,9 @@ namespace Scripts.Infrastructure
             GameObject initialPoint = GameObject.FindWithTag(InitialPoint);
 
             GameObject hero = Instantiate(Path, initialPoint.transform.position);
+            HeroMove heroMove = hero.GetComponent<HeroMove>();
+            HeroAnimation heroAnimator = hero.GetComponent<HeroAnimation>();
+            heroAnimator.Constroct(heroMove);
             //Instantiate(Hud);
 
             CameraFollow(hero);

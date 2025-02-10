@@ -1,5 +1,4 @@
 ﻿using Scripts.Infrastructure.Services.Input;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Scripts.Infrastructure

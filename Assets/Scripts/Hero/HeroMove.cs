@@ -11,6 +11,9 @@ namespace Scripts.Hero
         private Camera _camera;
         private IInputServices _inputServices;
 
+        public CharacterController CharacterController => _characterController;
+        public float MovementSpeed => _movementSpeed;
+
         private void Awake()
         {
             _inputServices = Game.InputServices;
