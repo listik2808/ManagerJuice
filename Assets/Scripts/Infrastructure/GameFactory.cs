@@ -12,6 +12,11 @@ namespace Scripts.Infrastructure
             _assetProvider = assets;
         }
 
+        public FillingMachine CreateFillingMachine(FillingMachine fillingMachineOne, Transform _pointTransformFillingMachine)
+        {
+            return _assetProvider.InstantiateFillingMAchine(fillingMachineOne, _pointTransformFillingMachine);
+        }
+
         public GameObject CreateHero(GameObject point)
         {
             return _assetProvider.Instantiate(AssetPath.HeroPath, point.transform.position);

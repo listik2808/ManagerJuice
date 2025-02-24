@@ -7,5 +7,6 @@ namespace Scripts.Infrastructure.AssetManagement
     {
         GameObject Instantiate(string path);
         GameObject Instantiate(string path, Vector3 point);
+        FillingMachine InstantiateFillingMAchine(FillingMachine fillingMachine, Transform point);
     }
 }

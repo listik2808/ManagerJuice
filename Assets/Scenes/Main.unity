@@ -640,6 +640,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &716833383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716833384}
+  m_Layer: 0
+  m_Name: PointFillingMachineOne
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716833384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716833383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.35, y: 0.5, z: 19.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a400c6e74de2a48bed02ecaccb0123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingMachineOne: {fileID: 162731615361412736}
+  _fillingMachineOne: {fileID: 7388335808747752067, guid: 2d5df121e4ed9404ab1c4b50f904e8c1, type: 3}
+  _pointTransformFillingMachine: {fileID: 716833384}
 --- !u!1 &1110643349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,17 +2686,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d5df121e4ed9404ab1c4b50f904e8c1, type: 3}
---- !u!114 &162731615361412736 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7388335808747752067, guid: 2d5df121e4ed9404ab1c4b50f904e8c1, type: 3}
-  m_PrefabInstance: {fileID: 162731615361412735}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416f432a03a753e4a83e48dfa1112cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2680,3 +2701,4 @@ SceneRoots:
   - {fileID: 976080623}
   - {fileID: 334439743}
   - {fileID: 979855863}
+  - {fileID: 716833384}

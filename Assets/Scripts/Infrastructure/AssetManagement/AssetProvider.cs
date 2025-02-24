@@ -15,5 +15,10 @@ namespace Scripts.Infrastructure.AssetManagement
             GameObject prefab = Resources.Load<GameObject>(path);
             return Object.Instantiate(prefab, point, Quaternion.identity);
         }
+
+        public FillingMachine InstantiateFillingMAchine(FillingMachine fillingMachine,Transform point)
+        {
+            return Object.Instantiate(fillingMachine, point);
+        }
     }
 }
