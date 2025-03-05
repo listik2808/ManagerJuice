@@ -5,19 +5,16 @@ using UnityEngine;
 
 namespace Scripts.Triggers
 {
-    public class OnTriggerPurchaseFillingMachines : MonoBehaviour,IOnTrigger
+    public class OnTriggerPurchaseFillingMachines : MonoBehaviour, IOnTriggerExit
     {
         [SerializeField] private BoxCollider _collider;
         [SerializeField] private CanvasPurchaseMachines _machine;
-        public Action EnterTrigger => Enter;
-
-        public Action ExitTrigger => Exit;
 
         private void OnTriggerEnter(Collider other)
         {
             if(other.TryGetComponent(out HeroMove heroMove))
             {
-                EnterTrigger?.Invoke();
+                Enter();
             }
         }
 
@@ -25,7 +22,7 @@ namespace Scripts.Triggers
         {
             if (other.TryGetComponent(out HeroMove heroMove))
             {
-                ExitTrigger?.Invoke();
+                Exit();
             }
         }
 

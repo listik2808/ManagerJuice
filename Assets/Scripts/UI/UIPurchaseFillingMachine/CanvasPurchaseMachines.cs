@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using Scripts.ButtonTrigger;
+﻿using Scripts.ButtonTrigger;
 using System;
 using System.Collections.Generic;
 using UnityEngine;

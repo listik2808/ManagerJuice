@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b409dbf573a3f5b4ba82a09d77c5dfce, type: 3}
-  m_Name: FillingMachine
+  m_Script: {fileID: 11500000, guid: e050371bbd721c240995c3a8ed0e2807, type: 3}
+  m_Name: PackJuice
   m_EditorClassIdentifier: 
-  PrefabSugar: {fileID: 7388335808747752067, guid: 2d5df121e4ed9404ab1c4b50f904e8c1, type: 3}
+  Level: 0
+  Price: 3
+  JuicePack: {fileID: 1250105170857586129, guid: 9ccfa1e166d9b614b9ac3c9b044c365f, type: 3}

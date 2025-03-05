@@ -4,10 +4,11 @@ namespace Scripts.Triggers
 {
     public interface IOnTrigger
     {
-        Action EnterTrigger {  get; }
-        Action ExitTrigger { get; }
-
         void Enter();
+    }
+
+    public interface IOnTriggerExit: IOnTrigger
+    {
         void Exit();
     }
 }

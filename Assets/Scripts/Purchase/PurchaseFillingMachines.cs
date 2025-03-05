@@ -1,4 +1,5 @@
-﻿using Scripts.Infrastructure;
+﻿using Scripts.CustomObjectPool;
+using Scripts.Infrastructure;
 using Scripts.Infrastructure.Services;
 using Scripts.PlayerWallet;
 using System;
@@ -8,9 +9,11 @@ namespace Scripts.Purchase
 {
     public class PurchaseFillingMachines :MonoBehaviour
     {
-        [SerializeField] private FillingMachine _fillingMachineOne;
+        [SerializeField] private DataFillingMachine _fillingMachineOne;
         [SerializeField] private Transform _pointTransformFillingMachine;
         IGameFactory _gameFactory;
+
+        public Action <FillingMachine> OnFillingMachine;
 
         private void Awake()
         {
@@ -20,11 +23,12 @@ namespace Scripts.Purchase
         public Action<int> CloseButton;
         public void TryPay(int index)
         {
-            if(Wallet.Pay(_fillingMachineOne.PriceGold))
+            if(Wallet.Pay(_fillingMachineOne.PrefabSugar.PriceGold))
             {
-                _fillingMachineOne.Open(true);
-               FillingMachine machine = _gameFactory.CreateFillingMachine(_fillingMachineOne, _pointTransformFillingMachine);
-                //machine.gameObject.SetActive(true);
+               FillingMachine machine = _gameFactory.CreateFillingMachine(_fillingMachineOne.PrefabSugar, _pointTransformFillingMachine);
+                machine.ConstructFillingMachine(_fillingMachineOne.Price,_fillingMachineOne.DataJuice,_fillingMachineOne.MaxCountJuicePack,_fillingMachineOne.MaxCountPool,_fillingMachineOne.LevelMachine);
+                machine.Open(true);
+                OnFillingMachine?.Invoke(machine);
                 CloseButton?.Invoke(index);
             }
         }
